@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sleep Quality Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e6f7ff; /* Light blue background */
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: white;
+            margin: auto;
+            width: 60%;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            color: #1a8cff; /* Blue shade */
+        }
+
+        .data-display {
+            text-align: left;
+            padding: 10px;
+            border-bottom: 1px solid #ddd; /* Light grey line */
+        }
+
+        .notification {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ffcccc; /* Light red border */
+            background-color: #fff0f0; /* Very light red */
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sleep Quality Report</h1>
+
+        <!-- Sleep Quality Data Display -->
+        <div class="data-display">
+            <h2>Data</h2>
+            <p><strong>Quality Score:</strong> {{ "%.1f"|format(data) }}</p>
+        </div>
+        
+        <!-- Notifications -->
+       <!-- Notifications -->
+        <div class="notification">
+            <h2>Notifications</h2>
+            <div>{{ notifications|safe }}</div>
+        </div>
+    </div>
+</body>
+</html>
